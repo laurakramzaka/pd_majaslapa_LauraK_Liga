@@ -4,42 +4,138 @@
 <head>
   <meta charset="utf-8">
   <title>Audi</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 </head>
 <body>
 
 
-
-    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/styles.css" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-
-    </div>
-
-    <div class="container1">
-
-
-        <a href="spele.html">TRENĒJIES!</a>
-        <a href="augi1" class="nav-link">AUGU AUDI</a>
-        <a href="dzivnieki1" class="nav-link">DZĪVNIEKU AUDI</a>
-   
-    </div>
-
-    <div class="px-4 pt-5 my-5 text-center border-bottom">
-
+        
+        <div class="container1">
         <div class="container2">
-            <br>
-        <img src="./AUDI.png" alt="Audi">
+            <div class="kreisais-container">
+                <div class="container3-1"><a href="#AuguAudi" class="nav-link1">Augu audi</a></li></div>
+                <div class="container3-2"><a href="#Dzīvniekuaudi" class="nav-link2">Dzīvnieku audi</a></li></div>
+                <div class="container3-3"><a href="spele.html" class="nav-link3">TRENĒJIES!</a></div>      
+          
+                <form class="ievadesattalums" onsubmit="event.preventDefault(); poga(); ">
+                  <label for="ievade" > Ievadi vārdu: </label>
+                  <input id="ievade" type="text">
+                  <button type="button" onclick=poga()>Apstiprini</button>
+                  <p id="izvade" class="izvade"></p>
+              </form>
+            </div>
+        </div>
+       
+       
+        <br>
+        <img src="./audi.png" class="audibilde" alt="Audi">
 
-    <main>
-        <h2>Atskaite līdz monitoringa darbam</h2>
-        <p id="countdown"></p>
-    </main>
- 
-<script src="js/countdown.js"></script>
+        <p class="monitorings"> Atskaite līdz monitoringa darbam </p>
+        <div id="atskaite"></div>
 
+        <br>
+        <br>
+        <br>
+        <div class="container4">
+        <div class="container5"> <a name="AuguAudi"></a> 
+        <h1 class="virsraksts1">Augu audi</h1>
+        </div>
+        
+        <p class="mazaisvirsraksts1"> Veidotājaudi jeb meristēma</p>
+        
+        <div class="teksts">
+        
+        <p> Nodrošina augšanu un diferencējas par citiem audiem. Šūnā ir salīdzinoši liels kodols un plāns šūnapvalks.
+        <p class="tema"> Meristēma-</p> nodrošina stumbra un saknes augšanu garumā. Atrodas stumbra galotnes pumpuros un saknes augšanas konusā.
+        <p class="tema">Iestarpinātā meristēma -</p> nodrošina graudzāļu augšanu garumā. Atrodas stiebru mezglos.
+        <p class="tema">Sānu meristēmas -</p> kambijs un korķa kambijs nodrošina stumbra un saknes augšanu resnumā. Kambija šūnām daloties, uz ārpusi veidojas lūksne, bet uz iekšpusi - koksne. Korķa kambija šūnām daloties, veidojas sekundārie segaudi - periderma. </p>
+
+        <br>
+
+        <p class="mazaisvirsraksts2"> Segaudi</p>
+        <p> Segaudi apņem augu orgānus no ārpuses. </p>  
+        <p class="tema"> Epiderma- </p> Epiderma jeb virsāda ir ārējais ādas slānis, kas veidots no vārākām epitēlijšūnu kārtām.
+        <p class="tema"> Periderma- </p> Daudzgadīgo sēklaugu, parasti divdīgļlapju, sekundāro segaudu kopums.
+        <p class="tema"> Kreve- </p> Atmirušo audu slānis, kas veidojas kokaugu stumbra virspusē no peridermas un mizas šūnām.
+
+        <br>
+
+
+        <p class="mazaisvirsraksts2"> Vadaudi</p>
+        <p> Nodrošina vielu plūsmu audos. </p>  
+        <p class="tema"> Traheīdas- </p> Vadaudu elementi augstāko augu (parasti paparžaugu, kailsēkļu) koksnē — nedzīvas pagarinātas šūnas ar pārkoksnētiem, iekšpusē nevienmērīgi uzbiezinātiem apvalkiem.
+        <p class="tema"> Trahejas- </p>  Vadaudu elementi augstāko augu (parasti segsēkļu) koksnē — nedzīvas, no vertikālas dzīvu šūnu virknes izveidojušās caurulītes.
+        <p class="tema"> Sietstobri ar pavadītājšūnām- </p> Šūnu rinda, pa kuru organiskās vielas plūst no lapām uz pārējām augu daļām.
+
+        <br>
+
+        <p class="mazaisvirsraksts2"> Pamataudi jeb parenhīma</p>
+        <p> Veido auga pamatmasu. </p>  
+        <p class="tema"> Asimilētājaudi- </p> Zaļo augu pastāvīgie audi, kuros notiek organisko vielu veidošanās no neorganiskām vielām (fotosintēze).
+        <p class="tema"> Uzkrājējaudi- </p>  Augu pamataudi, kuros uzkrājas rezerves barības vielas (saknēs, sakneņos, bumbuļos, gurnos, stumbros, lapās un sēklās).
+        <p class="tema"> Vēdinātājaudi jeb aerenhīma- </p> Satur lielas šūnstarpu telpas un gaisa ejas, mazina auga blīvumu. Attīstīta ūdensaugiem un purva augiem.
+
+        <br>
+
+        <p class="mazaisvirsraksts2"> Balstaudi</p>
+        <p> Padara augus izturīgākus. </p>  
+        <p class="tema"> Kolenhīma- </p> Auga mehāniskie audi, kas tā orgāniem (galvenokārt jauniem, augošiem) piešķir nepieciešamo stingrumu; sastāv no dzīvām šūnām ar lokāliem šo šūnu celulozes apvalku sabiezējumiem.
+        <p class="tema"> Sklerenhīmas šķiedras- </p> Piešķir izturību. Var pastāvēt kā atsevišķas šūnu grupas vai arī veido lūksnes un koksnes šķiedras.
+        <p class="tema"> Akmensšūnas jeb sklereīdas- </p> Nodrošina auga lokālo izturību, daudz sastopamas sēklapvalkos un augļapvalkos. Sastāv no šūnām ar biezu, pārkoksnētu šūnapvalku.
+
+</div>
+
+  <br>
+  <br>
+  <br>
+
+        <div class="container6">
+          <div class="container5"> <a name="Dzīvniekuaudi"></a> 
+          <h1 class="virsraksts1">Dzīvnieku audi</h1>
+        </div>
+
+        <p class="mazaisvirsraksts1"> Epitēlijaudi</p>
+        
+        <div class="teksts">
+        
+        <p> Sedz ķermeni no ārpuses, iklāj dobumus, veido dziedzerus, kas izdala sekrētus.
+        <p class="tema"> Segepitēlijs-</p> Aizsargā no ārvides kaitīgās iedarbības un nodrošina vielu selektīvu caurlaidību.
+        <p class="tema">Dziederepitēlijs -</p> Veido iekšējās un ārējās sekrēcijas dziedzerus, kas izdala sekrētus, piemēram, elpceļos - gļotas, bet iekšējās sekrēcijas dziedzeri - hormonus.
+
+        <br>
+
+        <p class="mazaisvirsraksts2"> Muskuļaudi</p>
+        <p> Spēj sarauties un nodrošina kustības. </p>  
+        <p class="tema"> Šķērssvītrotie- </p> Veido skeleta muskuļus, nodrošina ķermeņa pārvietošanos.
+        <p class="tema"> Gludie- </p> Nodrošina gribai nepakļauto iekšējo orgānu saraušanos. Lēni kontrahējas un lēni piekūst.
+        <p class="tema"> Sirds muskuļaudi- </p> Saraujoties nodrošina sirdsdarbību. Sastāv no savstarpēji savienotām, šķērssvītrotām šķiedrām.
+
+        <br>
+
+
+        <p class="mazaisvirsraksts2"> Nervaudi</p>
+        <p> Uztver pārmaiņas ārvidē, saskaņo orgānu un visa organisma darbību. </p>  
+
+
+        <br>
+
+        <p class="mazaisvirsraksts2"> Saistaudi</p>
+        <p>Saista audus un orgānus, aizsargā tos un nodrošina vielmaiņu. </p>  
+        <p class="tema"> Šķidrie- </p> Asins un limfa - Veic vielu transportfunkciju, aizsargfunkciju un daudzas citas funkcijas. Tajā ir ļoti daudz šķidras šūnstarpu vielas.
+        <p class="tema"> Cietie- </p> Kaulaudi - balsta un aizsargā iekšējos orgānus un kopā ar muskuļiem nodrošina ķermeņa pārvietošanos. Skrimšļaudi - pasargā kaulu galus no bojāšanās. Blīvie saistaudi (cīpslas, saites) - piestiprina muskuļus pie kauliem un saista tos savā starpā.
+        <p class="tema"> Irdenie- </p>Irdenie saistaudi - Aizpilda lielāko daļu no organisma, satur daudz recekļveida šūnstarpu vielu. Taukaudi - audi ap asinsvadiem, nervu šķiedru kūlīšiem u.c. uzkrāj rezerves taukus, pasargā orgānus no triecieniem un nodrošina termoizolāciju. Šie audi piedalās homeozstāzes nodrošināšanā, veic mehānisko funkciju u. c.
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <script src="script.js"> </script>
 </body>
 
 </html>
