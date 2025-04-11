@@ -166,7 +166,7 @@ body {
     margin: 0;
   }
 
-  .izvade.show {
+  .izvade.paradas {
     opacity: 1;
   }
   
@@ -177,10 +177,17 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
     padding: 20px;
+    background-color: #d9e1aa;
+    width: 1700px;
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    padding-top: 40px;
+
   }
   
   #auduspele img {
-    max-width: 300px;
+    min-width: 350px;
     height: auto;
     border: 1px solid #ccc;
     margin-bottom: 20px;

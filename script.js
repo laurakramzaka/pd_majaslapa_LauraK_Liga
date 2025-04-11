@@ -1,3 +1,15 @@
+const tissueData = [
+    { name: "segaudi", image: "images/segaudi.png" },
+    { name: "veidotājaudi", image: "images/veidotajaudi.jpg" },
+    { name: "vadaudi", image: "images/vadaudi.png" },
+    { name: "mehāniskie", image: "images/mehaniskie.png" },
+    { name: "epitēlijaudi", image: "images/epitelijaudi.png" },
+    { name: "muskuļaudi", image: "images/muskulaudi.png" },
+];
+
+let currentIndex = 0;
+let attempts = 0;
+
 function laika_atskaite() {
     const datums = new Date("April 23, 2025 00:00:00").getTime();
     const tagad = new Date().getTime();
@@ -29,58 +41,65 @@ function poga() {
     const izvade = document.getElementById("izvade");
     izvade.innerHTML = `Sveicināts, ${ievade.value}!`
     
-    izvade.classList.remove("show");
+    izvade.classList.remove("paradas");
     void izvade.offsetWidth;
-    izvade.classList.add("show");
+    izvade.classList.add("paradas");
 }
 
 
 
-const tissueData = [
-    { name: "segaudi", image: "images/segaudi.png" },
-    { name: "veidotājaudi", image: "images/veidotajaudi.jpg" },
-    { name: "vadaudi", image: "images/vadaudi.png" },
-    { name: "pamataudi", image: "images/pamataudi.png" },
-    { name: "mehāniskie", image: "images/mehaniskie.png" },
-    { name: "epitēlijaudi", image: "images/epitelijaudi.png" },
-    { name: "nervaudi", image: "images/nervaudi.png" },
-    { name: "muskuļaudi", image: "images/muskulaudi.png" },
-    { name: "saistaudi", image: "images/saistaudi.jpg" }
-  ];
-  
-  let currentIndex = 0;
-  
-  function loadImage() {
+
+function loadImage() {
     const imgElement = document.getElementById('tissueImage');
     imgElement.src = tissueData[currentIndex].image;
     document.getElementById('feedbackText').textContent = "";
     document.getElementById('answerInput').value = "";
-  }
-  
-  function checkAnswer() {
+}
+
+function checkAnswer() {
+    console.log("checkAnswer called, currentIndex:", currentIndex); 
     const input = document.getElementById('answerInput').value.trim().toLowerCase();
     const correct = tissueData[currentIndex].name.toLowerCase();
     const feedback = document.getElementById('feedbackText');
-  
+
     if (input === correct) {
-      feedback.textContent = "Pareizi!";
-      feedback.style.color = "green";
+        feedback.textContent = "Pareizi! Nākamais attēls.";
+        feedback.style.color = "green";
+        
+        attempts = 0; 
+
+        setTimeout(() => {
+            currentIndex++;
+            console.log("Correct answer! Moving to next image, currentIndex:", currentIndex);
+
+            if (currentIndex < tissueData.length) {
+                loadImage();
+            } else {
+                feedback.textContent = "Spēle beigusies! Apsveicu!";
+            }
+        }, 2000);
+
     } else {
-      feedback.textContent = "Nepareizi! Mēģini vēlreiz vai beidz spēli.";
-      feedback.style.color = "red";
+        attempts++; 
+        feedback.textContent = "Nepareizi! Mēģini vēlreiz.";
+        feedback.style.color = "red";
     }
-  }
-  
-  function nextImage() {
+
+}
+
+function nextImage() {
+    console.log("nextImage called, currentIndex before:", currentIndex);
     currentIndex = (currentIndex + 1) % tissueData.length;
+    attempts = 0;
     loadImage();
-  }
-  
-  function endGame() {
+    console.log("Moving to next image, currentIndex after:", currentIndex);
+}
+
+function endGame() {
     alert("Paldies par spēli!");
     currentIndex = 0;
+    attempts = 0;
     loadImage();
-  }
-  
-  window.addEventListener("DOMContentLoaded", loadImage);
-  
+}
+
+window.addEventListener("DOMContentLoaded", loadImage);
